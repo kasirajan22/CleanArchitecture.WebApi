@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "DomainLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DomainLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DomainLayer.dll": {}
+        }
+      },
+      "InfrastructureLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/InfrastructureLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InfrastructureLayer.dll": {}
+        }
+      },
+      "PresentationLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PresentationLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PresentationLayer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DomainLayer/1.0.0": {
+      "type": "project",
+      "path": "../DomainLayer/DomainLayer.csproj",
+      "msbuildProject": "../DomainLayer/DomainLayer.csproj"
+    },
+    "InfrastructureLayer/1.0.0": {
+      "type": "project",
+      "path": "../InfrastructureLayer/InfrastructureLayer.csproj",
+      "msbuildProject": "../InfrastructureLayer/InfrastructureLayer.csproj"
+    },
+    "PresentationLayer/1.0.0": {
+      "type": "project",
+      "path": "../PresentationLayer/PresentationLayer.csproj",
+      "msbuildProject": "../PresentationLayer/PresentationLayer.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "DomainLayer >= 1.0.0",
+      "InfrastructureLayer >= 1.0.0",
+      "PresentationLayer >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/magizhan/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/ApplicationLayer.csproj",
+      "projectName": "ApplicationLayer",
+      "projectPath": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/ApplicationLayer.csproj",
+      "packagesPath": "/Users/magizhan/.nuget/packages/",
+      "outputPath": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/magizhan/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/DomainLayer/DomainLayer.csproj": {
+              "projectPath": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/DomainLayer/DomainLayer.csproj"
+            },
+            "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/InfrastructureLayer/InfrastructureLayer.csproj": {
+              "projectPath": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/InfrastructureLayer/InfrastructureLayer.csproj"
+            },
+            "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/PresentationLayer.csproj": {
+              "projectPath": "/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/PresentationLayer.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
