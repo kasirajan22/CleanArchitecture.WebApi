@@ -17,3 +17,4 @@
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/bin/Debug/net8.0/PresentationLayer.pdb
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/obj/Debug/net8.0/ApplicationLayer.csproj.AssemblyReference.cache
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/obj/Debug/net8.0/ApplicationLayer.csproj.CopyComplete
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/ApplicationLayer/obj/Debug/net8.0/ApplicationLayer.sourcelink.json

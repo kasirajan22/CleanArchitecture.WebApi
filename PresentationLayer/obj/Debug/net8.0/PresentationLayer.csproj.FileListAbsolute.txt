@@ -9,3 +9,4 @@
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/refint/PresentationLayer.dll
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.pdb
 /Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/ref/PresentationLayer.dll
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.sourcelink.json
