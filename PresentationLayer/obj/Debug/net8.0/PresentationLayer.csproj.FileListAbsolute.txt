@@ -1,0 +1,12 @@
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/bin/Debug/net8.0/PresentationLayer.deps.json
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/bin/Debug/net8.0/PresentationLayer.dll
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/bin/Debug/net8.0/PresentationLayer.pdb
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.AssemblyInfoInputs.cache
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.AssemblyInfo.cs
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.csproj.CoreCompileInputs.cache
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.dll
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/refint/PresentationLayer.dll
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.pdb
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/ref/PresentationLayer.dll
+/Users/magizhan/Dotnet-GitSample/CleanArchitecture.WebApi/PresentationLayer/obj/Debug/net8.0/PresentationLayer.sourcelink.json
