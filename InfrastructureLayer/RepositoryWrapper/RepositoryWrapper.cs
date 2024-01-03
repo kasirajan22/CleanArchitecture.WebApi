@@ -1,6 +1,6 @@
 ﻿using InfrastructureLayer;
 
-namespace ApplicationLayer;
+namespace InfrastructureLayer;
 
 public sealed class RepositoryWrapper : IRepositoryWrapper
 {

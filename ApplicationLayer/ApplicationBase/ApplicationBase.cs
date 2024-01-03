@@ -1,4 +1,6 @@
-﻿namespace ApplicationLayer;
+﻿using InfrastructureLayer;
+
+namespace ApplicationLayer;
 
 public abstract class ApplicationBase
 {
