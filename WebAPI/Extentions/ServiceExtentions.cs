@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using ApplicationLayer;
 
 public static class ServiceExtentions
 {
@@ -13,6 +14,11 @@ public static void ConfigureMSSqlContext(this IServiceCollection services, IConf
     {
         var connectionString = config.GetValue("ConStr","");
         services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(connectionString, x => x.MigrationsAssembly("InfrastructureLayer"))); //, x => x.MigrationsAssembly("../DomainLayer/DomainLayer")
+    }
+    public static void ConfigureWrappers(this IServiceCollection services)
+    {
+        services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+        services.AddScoped<IApplicationWrapper, ApplicationWrapper>();
     }
     public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration config)
     {

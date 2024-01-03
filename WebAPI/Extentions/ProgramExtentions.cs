@@ -16,13 +16,14 @@ public static class ProgramExtentions
         builder.Services.ConfigureSwaggerGen();
         builder.Services.AddSwaggerGen();
         builder.Services.ConfigureMSSqlContext(configBuilder);
+        builder.Services.ConfigureWrappers();
         return builder;
     }
 
     public static WebApplication ConfigureApplication(this WebApplication app)
     {
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        //if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
@@ -33,6 +34,10 @@ public static class ProgramExtentions
         app.UseAuthorization();
 
         app.MapControllers();
+
+        app.UseExceptionMiddleware();
+
+        app.UseSwaggerAuthorized();
 
         return app;
     }
