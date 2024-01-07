@@ -10,10 +10,10 @@ namespace MyApp.Namespace
 {
     public class BaseController : ControllerBase
     {
-        protected readonly IApplicationWrapper _business;
+        protected readonly IApplicationWrapper _application;
         private Header _header = null!;
 
-        public BaseController(IApplicationWrapper business) => _business = business;
+        public BaseController(IApplicationWrapper business) => _application = business;
 
         [NonAction]
         public virtual IActionResult Return(Response response)

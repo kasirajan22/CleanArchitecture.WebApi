@@ -27,6 +27,5 @@ public class UserSession
 
     public DateTime EndsOn { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; }
 }

@@ -35,4 +35,47 @@ public class UserService : ApplicationBase, IUserService
             return Response.Failure("User already exist.");
         }
     }
+
+    public async Task<Response> SignInAsync(SignInDto requestDto, Header header)
+    {
+        var user = await _repository.userRepo.GetAsync(userName: requestDto.UserName);
+        if (user is not null)
+        {
+            if (SecurityManager.VerifyPassword(user!.Password, requestDto.Password))
+            {
+                var now = DateTime.UtcNow;
+                await _repository.userSessionRepo.CloseExistingSessionsAsync(user.Id, now);
+                var userSessionId = Guid.NewGuid();
+                user.Token = JwtManager.Generate(user, userSessionId);
+                var userSession = new UserSession
+                {
+                    Id = userSessionId,
+                    UserId = user.Id,
+                    StartsOn = now,
+                    EndsOn = now.AddMinutes(480),
+                    LoginType = "Web",
+                    IpAddress = header.IpAddress,
+                    SessionToken = user.Token
+                };
+                user.LastLogin = DateTime.UtcNow;
+                _repository.userSessionRepo.Create(userSession);
+                _repository.userRepo.Update(user);
+                await _repository.SaveAsync();
+
+                var resp = new UserDto {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    UserName = user.UserName,
+                    NameIdentifier = user.NameIdentifier,
+                    ForcePasswordChange = user.ForcePasswordChange,
+                    Token = user.Token
+                };
+                return Response.Success(resp);
+            }
+
+        }
+            return Response.Failure("Unable to login.");
+
+    }
 }

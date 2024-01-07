@@ -35,9 +35,10 @@ public class User
 
     public bool IsDeleted { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime UpdatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
+
+    [NotMapped]
+    public string Token { get; set; }
 }
