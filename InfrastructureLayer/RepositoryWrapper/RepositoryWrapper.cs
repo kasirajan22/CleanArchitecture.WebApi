@@ -13,4 +13,6 @@ public sealed class RepositoryWrapper : IRepositoryWrapper
         _userRepo = new(() => new UserRepo(_context));
     }
     public IUserRepo userRepo => _userRepo.Value;
+
+    public async Task<int> SaveAsync() => await _context.SaveChangesAsync();
 }

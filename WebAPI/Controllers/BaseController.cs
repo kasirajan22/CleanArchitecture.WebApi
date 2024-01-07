@@ -1,6 +1,7 @@
 using System.Net;
 using System.Security.Claims;
 using System.Text.Json;
+using ApplicationLayer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer;
@@ -9,7 +10,11 @@ namespace MyApp.Namespace
 {
     public class BaseController : ControllerBase
     {
+        protected readonly IApplicationWrapper _business;
         private Header _header = null!;
+
+        public BaseController(IApplicationWrapper business) => _business = business;
+
         [NonAction]
         public virtual IActionResult Return(Response response)
         {

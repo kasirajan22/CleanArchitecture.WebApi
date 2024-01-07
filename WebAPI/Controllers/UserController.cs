@@ -12,12 +12,7 @@ namespace MyApp.Namespace
     [ApiController]
     public class UserController : BaseController
     {
-        private readonly IUserService _userService;
-
-        public UserController(IUserService userService)
-        {
-            _userService = userService;
-        }
+        public UserController(IApplicationWrapper business) : base(business) { }
 
         /// <summary>
         /// Registers user into the system 
@@ -30,7 +25,7 @@ namespace MyApp.Namespace
         [ProducesResponseType(typeof(ResponseFailure), 400)]
         public async Task<IActionResult> SignUpAsync(SignUpRequestDto requestDto)
         {
-            var response = await _userService.SignUpAsync(requestDto, Header);
+            var response = await _business.userService.SignUpAsync(requestDto, Header);
             return Ok(response);
         }
     }
