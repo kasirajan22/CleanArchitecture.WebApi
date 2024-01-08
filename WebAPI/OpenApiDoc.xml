@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MyApp.Namespace.EmployeeController.GetAll">
+            <summary>
+            Get All Employees
+            </summary>
+            <param name="requestDto"></param>
+            <returns>Returns all employee response</returns>
+        </member>
+        <member name="M:MyApp.Namespace.UserController.SignUpAsync(PresentationLayer.SignUpRequestDto)">
+            <summary>
+            Registers user into the system 
+            </summary>
+            <param name="requestDto"></param>
+            <returns>Returns sign up response</returns>
+        </member>
+        <member name="M:MyApp.Namespace.UserController.SignInAsync(PresentationLayer.SignInDto)">
+            <summary>
+            Logs user into the system
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

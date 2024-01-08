@@ -27,8 +27,8 @@ public static class SwaggerExtensions
                     Url = new Uri("https://www.google.com/license")
                 }
             });
-            // var xmlPath = Path.Combine(AppContext.BaseDirectory, "OpenApiDoc.xml");
-            // c.IncludeXmlComments(xmlPath);
+            var xmlPath = Path.Combine(AppContext.BaseDirectory, "OpenApiDoc.xml");
+            c.IncludeXmlComments(xmlPath);
 
             c.CustomOperationIds(o =>
             {
@@ -43,6 +43,7 @@ public static class SwaggerExtensions
                 In = ParameterLocation.Header,
                 Description = "JWT Authorization header using the Bearer scheme."
             });
+            c.OperationFilter<AuthOperationFilter>();
         });
     }
 }
